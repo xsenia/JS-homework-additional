@@ -24,7 +24,7 @@ const guessNumber = function () {
         console.log(guessedNumber);     
 
     do {        
-        query = prompt(`Введите число (загадано число ${guessedNumber})`);        
+        query = prompt(`Введите число`);        
 
         if (query === null || query === '') {
             alert('Игра заканчивается');
@@ -35,12 +35,12 @@ const guessNumber = function () {
 
         do {
             while ( query > guessedNumber ) {
-                query = prompt(`Ваше число больше (загадано число ${guessedNumber}), введите другое`);
+                query = prompt(`Ваше число больше, введите другое`);
                 query = Number(query);
             } 
     
             while ( query < guessedNumber ) {
-                query = prompt(`Ваше число меньше (загадано число ${guessedNumber}), введите другое`);
+                query = prompt(`Ваше число меньше, введите другое`);
                 query = Number(query);
             } 
         } while (query !== guessedNumber)    
