@@ -17,7 +17,7 @@ const addZero = function(elem) {
     }
 };
 
-console.log('dateNow: ', `${dateHours}:${dateMinutes}:${dateSeconds} ${dateDate}.${dateMonth}.${dateFullYear}`);
+
 
 dateHours = addZero(dateHours);
 dateMinutes = addZero(dateMinutes);
@@ -26,4 +26,11 @@ dateDate = addZero(dateDate);
 dateMonth = addZero(dateMonth);
 
 console.log('dateNow: ', `${dateHours}:${dateMinutes}:${dateSeconds} ${dateDate}.${dateMonth}.${dateFullYear}`);
+
+dateNow = `${dateHours}:${dateMinutes}:${dateSeconds} ${dateDate}.${dateMonth}.${dateFullYear}`;
+
+let container = document.querySelector('.container');
+let content = document.createElement('p');
+content.textContent = dateNow;
+container.append(content);
 
